@@ -2,33 +2,135 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Pi Craft - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pi Craft - Pure Minecraft Survival</title>
   <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Pi Craft - A nostalgic, pure Minecraft survival server. No kits, no claims, no pay-to-win. Just blocks and community.">
 </head>
 <body>
-  <header>
-    <h1>Welcome to Pi Craft</h1>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="updates.html">Updates</a> |
-      <a href="server-info.html">Server Info</a> |
-      <a href="rules.html">Rules</a> |
-      <a href="faq.html">FAQ</a> |
-      <a href="contact.html">Contact</a> |
-      <a href="forum/">Forum</a>
-    </nav>
-  </header>
+  <div class="container">
+    <header class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="pi-logo">π</span>
+          Welcome to Pi Craft
+        </h1>
+        <p class="hero-subtitle">Pure Minecraft. Pure Community. Pure Fun.</p>
+        
+        <nav class="main-nav">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="updates.html" class="nav-link">Updates</a>
+          <a href="server-info.html" class="nav-link">Server Info</a>
+          <a href="rules.html" class="nav-link">Rules</a>
+          <a href="faq.html" class="nav-link">FAQ</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="forum/" class="nav-link">Forum</a>
+        </nav>
+      </div>
+      
+      <div class="server-status">
+        <div class="status-indicator">
+          <div class="status-dot online"></div>
+          <span>Server Online</span>
+        </div>
+        <div class="server-ip">
+          <strong>play.picraft.server</strong>
+        </div>
+      </div>
+    </header>
 
-  <main>
-    <p>Pi Craft is a nostalgic, pure Minecraft survival server. No kits, no claims, no pay-to-win nonsense. 
-    Just you, the blocks, and the community.</p>
-    <p>We run on a <strong>Raspberry Pi 5</strong> with a proper UPS-assisted power setup, 
-    ensuring the server stays online even during short power cuts.</p>
-    <p>Check the <a href="updates.html">Updates</a> page for the latest logs and news.</p>
-  </main>
+    <main class="content">
+      <section class="intro-section">
+        <div class="intro-card">
+          <h2>🎮 Fresh Start Survival</h2>
+          <p>Pi Craft is a brand new Minecraft survival server launching with the classic gameplay you love, enhanced with smart protections. No kits, no established claims, no pay-to-win nonsense. Join us from the very beginning and help shape this community as we build our world together!</p>
+        </div>
 
-  <footer>
-    <p>&copy; 2025 Pi Craft | Hosted on Raspberry Pi</p>
-  </footer>
-</body>
-</html>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🏗️</div>
+            <h3>Survival-First Gameplay</h3>
+            <p>Core survival mechanics remain untouched. Our plugins only enhance the experience and protect community areas like spawn and the market.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🌱</div>
+            <h3>Brand New World</h3>
+            <p>Join from day one! Fresh terrain, untouched resources, and the chance to be part of building something special from the ground up.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🛡️</div>
+            <h3>Smart Protection</h3>
+            <p>Anti-griefing protection in spawn and market areas, while keeping the wilderness completely open for authentic survival.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Reliable Hosting</h3>
+            <p>Powered by Raspberry Pi 5 with UPS backup - staying online even during power cuts.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="plugins-section">
+        <div class="plugins-card">
+          <h2>🔧 Server Enhancements</h2>
+          <p>We use carefully selected plugins to maintain server integrity and protect community spaces, while keeping wilderness gameplay completely vanilla.</p>
+          
+          <div class="plugins-grid">
+            <div class="plugin-category">
+              <h3>🛡️ Protection Systems</h3>
+              <ul class="plugin-list">
+                <li><strong>WorldGuard:</strong> Ready to protect community areas as they naturally develop</li>
+                <li><strong>CoreProtect:</strong> Block logging system for handling any grief incidents</li>
+                <li><strong>Anti-Cheat:</strong> Prevents flying, speed hacking, and other exploits from day one</li>
+                <li><strong>GriefPrevention:</strong> Available for community projects when needed</li>
+              </ul>
+            </div>
+            
+            <div class="plugin-category">
+              <h3>⚙️ Administration Tools</h3>
+              <ul class="plugin-list">
+                <li><strong>EssentialsX:</strong> Core admin commands and player management</li>
+                <li><strong>LuckPerms:</strong> Advanced permission system for staff roles</li>
+                <li><strong>DiscordSRV:</strong> Bridge between our Discord and Minecraft chat</li>
+                <li><strong>Vault:</strong> Economy framework for the community market</li>
+              </ul>
+            </div>
+            
+            <div class="plugin-category">
+              <h3>🌍 Quality of Life</h3>
+              <ul class="plugin-list">
+                <li><strong>Dynmap:</strong> Live web-based map to explore builds and plan adventures</li>
+                <li><strong>TreeAssist:</strong> Realistic tree felling (optional per player)</li>
+                <li><strong>Sleep Voting:</strong> Democratic night skipping when most players agree</li>
+                <li><strong>Custom Heads:</strong> Decorative player heads for builders</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="protection-info">
+            <h3>📍 Protection Philosophy</h3>
+            <p><strong>Starting Fresh:</strong> We're a brand new server! Protected areas will develop naturally as our community grows</p>
+            <p><strong>Spawn Area:</strong> Basic spawn protection to prevent griefing the arrival point</p>
+            <p><strong>Community Builds:</strong> As players create shared spaces, we'll add protection where the community needs it</p>
+            <p><strong>Wilderness:</strong> The vast majority of the world remains completely open for authentic survival gameplay</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="tech-section">
+        <div class="tech-card">
+          <h2>🥧 Powered by Pi</h2>
+          <p>We run on a <strong>Raspberry Pi 5</strong> with a proper UPS-assisted power setup, ensuring the server stays online even during short power cuts. It's not just about the hardware - it's about proving that great communities don't need corporate servers.</p>
+          
+          <div class="tech-specs">
+            <div class="spec">
+              <strong>Hardware:</strong> Raspberry Pi 5
+            </div>
+            <div class="spec">
+              <strong>Uptime:</strong> 99.9% with UPS backup
+            </div>
+            <div class="spec">
+              <strong>Version:</strong> Latest Minecraft Release
