@@ -2,34 +2,271 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Pi Craft - FAQ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pi Craft FAQ - Server Information & Common Questions</title>
   <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Frequently asked questions about Pi Craft Minecraft server - technical details, gameplay mechanics, server policies, and community guidelines.">
 </head>
 <body>
-  <header>
-    <h1>Frequently Asked Questions</h1>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="updates.html">Updates</a> |
-      <a href="server-info.html">Server Info</a> |
-      <a href="rules.html">Rules</a> |
-      <a href="faq.html">FAQ</a> |
-      <a href="contact.html">Contact</a> |
-      <a href="forum/">Forum</a>
-    </nav>
-  </header>
+  <div class="container">
+    <header class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="pi-logo">π</span>
+          Frequently Asked Questions
+        </h1>
+        <p class="hero-subtitle">Everything You Need to Know About Pi Craft</p>
+        
+        <nav class="main-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="updates.html" class="nav-link">Updates</a>
+          <a href="server-info.html" class="nav-link">Server Info</a>
+          <a href="rules.html" class="nav-link">Rules</a>
+          <a href="faq.html" class="nav-link active">FAQ</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="forum/" class="nav-link">Forum</a>
+        </nav>
+      </div>
+    </header>
 
-  <main>
-    <h2>What is UPS-assisted?</h2>
-    <p>It means the server is connected to a small battery (Uninterruptible Power Supply). 
-    If the power goes out, the server doesn’t crash instantly — it has time to shut down safely or ride out short outages.</p>
+    <main class="content">
+      <section class="faq-intro">
+        <div class="intro-card">
+          <h2>Comprehensive Server Information</h2>
+          <p>This FAQ addresses the most common questions about Pi Craft's technical infrastructure, gameplay mechanics, server policies, and community standards. We've organized these questions into categories to help you quickly find the information you're looking for, whether you're a prospective player researching the server or an existing community member seeking clarification on specific policies or technical details.</p>
+          
+          <p>If your question isn't answered here, please check our community forum for discussions about similar topics, or contact our administration team through the methods outlined on our contact page. We regularly update this FAQ based on community feedback and commonly asked questions.</p>
+        </div>
+      </section>
 
-    <h2>Is it vanilla?</h2>
-    <p>Yes. No kits, no claims, no pay-to-win. Just survival Minecraft.</p>
-  </main>
+      <section class="faq-categories">
+        <div class="faq-category">
+          <h2>Technical Infrastructure and Reliability</h2>
+          
+          <div class="faq-item">
+            <h3>What does "UPS-assisted" mean for server operation?</h3>
+            <div class="faq-answer">
+              <p>UPS stands for Uninterruptible Power Supply, which is essentially a sophisticated battery backup system that provides continuous power to our server hardware during electrical outages or power fluctuations. Our UPS system serves multiple critical functions beyond simple battery backup.</p>
+              
+              <p><strong>Power Continuity:</strong> When electrical power fails, the UPS immediately switches to battery power without any interruption to server operation. This seamless transition means players experience no disconnection or data loss during brief power outages that might last anywhere from seconds to several hours.</p>
+              
+              <p><strong>Power Conditioning:</strong> The UPS also provides power conditioning, which means it filters out electrical noise, voltage spikes, and fluctuations that could damage server hardware or cause instability. This results in more consistent server performance and longer hardware lifespan.</p>
+              
+              <p><strong>Graceful Shutdown Protection:</strong> For extended power outages that exceed battery capacity, the UPS communicates with our server software to initiate automated graceful shutdown procedures. This ensures that all player data, world saves, and server configurations are properly saved and closed before the system powers down, preventing data corruption that could occur from sudden power loss.</p>
+              
+              <p><strong>Battery Duration:</strong> Our current UPS configuration provides approximately 3-4 hours of continuous operation during complete power failure, which covers the vast majority of typical power outages in our area. For longer outages, the graceful shutdown feature ensures data integrity until power is restored.</p>
+            </div>
+          </div>
 
-  <footer>
-    <p>&copy; 2025 Pi Craft</p>
-  </footer>
+          <div class="faq-item">
+            <h3>How reliable is Raspberry Pi hosting compared to traditional servers?</h3>
+            <div class="faq-answer">
+              <p>Raspberry Pi hosting, when properly configured, can provide reliability comparable to traditional server hosting while offering unique advantages in terms of power efficiency, cost effectiveness, and environmental sustainability. Our Pi 5-based infrastructure demonstrates these capabilities through careful system design and redundant safeguards.</p>
+              
+              <p><strong>Performance Considerations:</strong> The Raspberry Pi 5's ARM-based architecture and 8GB of RAM provide sufficient computational power for Minecraft server operation with moderate player counts. While it may not match the raw processing power of enterprise x86 servers, it delivers smooth gameplay for our target community size while consuming significantly less electricity.</p>
+              
+              <p><strong>Reliability Measures:</strong> We've implemented multiple reliability measures including high-quality SD card storage, active cooling systems, automated monitoring, comprehensive backup systems, and the UPS power protection described above. These measures address the most common failure points associated with single-board computer hosting.</p>
+              
+              <p><strong>Maintenance and Monitoring:</strong> Continuous system monitoring tracks temperature, CPU usage, memory consumption, and storage performance. Automated alerts notify administrators of potential issues before they impact server stability, allowing for proactive maintenance rather than reactive problem-solving.</p>
+              
+              <p><strong>Scaling Capabilities:</strong> Should the server grow beyond current hardware capabilities, our infrastructure is designed for easy migration to more powerful hardware while maintaining all player data, world information, and community continuity.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3>What happens if the server crashes or experiences technical problems?</h3>
+            <div class="faq-answer">
+              <p>Our technical infrastructure includes multiple layers of protection and recovery procedures designed to minimize downtime and prevent data loss during various types of technical problems.</p>
+              
+              <p><strong>Automated Recovery:</strong> The server includes automated restart procedures that can recover from many common software crashes without manual intervention. These systems detect server failures and attempt automatic recovery while logging detailed information for administrative review.</p>
+              
+              <p><strong>Backup and Rollback:</strong> Comprehensive backup systems create multiple restore points, allowing us to roll back to stable server states if corruption or major issues occur. World backups are created every 30 minutes during active play, with full system backups performed daily.</p>
+              
+              <p><strong>Administrative Response:</strong> Our administration team receives automated alerts for server issues and maintains procedures for rapid response to technical problems. Most minor issues can be resolved within 15-30 minutes, while major problems typically require 1-2 hours for complete resolution.</p>
+              
+              <p><strong>Communication During Outages:</strong> When technical issues occur, we provide regular updates through our community forum and Discord channels about the nature of the problem, expected resolution time, and any temporary measures in place.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-category">
+          <h2>Gameplay Mechanics and Server Features</h2>
+          
+          <div class="faq-item">
+            <h3>Is Pi Craft a vanilla Minecraft server?</h3>
+            <div class="faq-answer">
+              <p>Pi Craft maintains authentic survival gameplay mechanics while incorporating carefully selected server management plugins that enhance the experience without compromising the core survival challenge. Our approach prioritizes gameplay authenticity while providing essential protections and administrative tools.</p>
+              
+              <p><strong>Core Gameplay Preservation:</strong> All fundamental Minecraft mechanics remain completely unchanged. Players must gather resources through mining, farming, and exploration exactly as in single-player survival mode. There are no starter kits, teleportation commands, creative mode access, or other shortcuts that would undermine the satisfaction of earning progress through skill and effort.</p>
+              
+              <p><strong>Enhanced Server Management:</strong> We use plugins for server administration, anti-griefing protection, and quality-of-life improvements that don't affect core gameplay balance. These include logging systems for grief recovery, basic spawn protection, and administrative tools for managing community spaces.</p>
+              
+              <p><strong>No Pay-to-Win Elements:</strong> Pi Craft completely rejects pay-to-win mechanics. There are no purchasable advantages, premium ranks with gameplay benefits, or donation perks that affect game balance. All players have identical access to game mechanics and features.</p>
+              
+              <p><strong>Community-Driven Economy:</strong> Any economic systems that develop on the server emerge naturally from player trading and collaboration rather than artificial plugin-generated economies. Players create value through their own resource gathering, building skills, and community contributions.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3>What plugins are installed and how do they affect gameplay?</h3>
+            <div class="faq-answer">
+              <p>Our plugin selection focuses exclusively on server management, community protection, and administrative tools while avoiding any modifications to core survival mechanics or game balance.</p>
+              
+              <p><strong>Protection and Security:</strong> WorldGuard provides basic spawn area protection and will support community spaces as they develop. CoreProtect logs all block changes for grief recovery without affecting normal gameplay. Anti-cheat systems prevent exploitation while remaining invisible during legitimate play.</p>
+              
+              <p><strong>Administration and Management:</strong> EssentialsX provides administrative commands for server management, LuckPerms handles permission systems for staff roles, and DiscordSRV bridges community chat between Minecraft and Discord. These systems operate entirely in the background for regular players.</p>
+              
+              <p><strong>Quality of Life Enhancements:</strong> Dynmap provides a web-based world map for exploration planning, TreeAssist offers optional realistic tree felling, sleep voting allows democratic night skipping, and custom heads provide additional decorative building options. All quality-of-life features are optional or community-driven.</p>
+              
+              <p><strong>Transparent Operation:</strong> All plugins operate transparently with clear documentation about their function and impact. Players are never surprised by hidden mechanics or undocumented features that might affect their gameplay experience.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3>Are there protected areas or land claims on the server?</h3>
+            <div class="faq-answer">
+              <p>Pi Craft uses a minimal protection approach that safeguards essential community spaces while preserving the freedom and risk that make survival gameplay engaging.</p>
+              
+              <p><strong>Current Protection Status:</strong> As a new server, we currently maintain only basic spawn area protection to prevent griefing of the arrival point where new players first join. This protection covers a small radius around spawn to ensure a welcoming first impression.</p>
+              
+              <p><strong>Future Community Spaces:</strong> As the community develops and players create shared projects, collaborative builds, or community infrastructure, protection zones may be established through democratic community discussion rather than administrative decree.</p>
+              
+              <p><strong>Wilderness Freedom:</strong> The vast majority of the server world remains completely open for unrestricted building, exploration, and resource gathering. Players can build anywhere, claim nothing through game mechanics, and experience the full risk and reward of open-world survival.</p>
+              
+              <p><strong>Grief Recovery:</strong> Rather than preventing all possible grief through extensive protection, we focus on rapid recovery from incidents using comprehensive logging and backup systems. This approach maintains the authentic feel of survival gameplay while ensuring that malicious damage doesn't permanently harm player creations.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3>What Minecraft version does the server run?</h3>
+            <div class="faq-answer">
+              <p>Pi Craft maintains compatibility with current Minecraft releases while balancing stability, feature availability, and community preferences for optimal gameplay experience.</p>
+              
+              <p><strong>Current Version Policy:</strong> We typically run the latest stable Minecraft release version to ensure players have access to current features, blocks, items, and gameplay mechanics. Version updates are implemented after thorough testing to ensure plugin compatibility and server stability.</p>
+              
+              <p><strong>Update Procedures:</strong> Major version updates undergo testing on backup server instances before implementation on the live server. Players receive advance notice of planned updates through forum announcements and Discord notifications, with scheduled downtime typically lasting 30-60 minutes.</p>
+              
+              <p><strong>Compatibility Support:</strong> We maintain documentation about client version compatibility and provide support for players experiencing version-related connection issues. The server is configured to support recent Minecraft versions to accommodate players who may not immediately update their clients.</p>
+              
+              <p><strong>Feature Integration:</strong> New Minecraft features are integrated thoughtfully with consideration for how they affect existing player builds, server balance, and community dynamics. Major gameplay changes are discussed with the community before implementation when possible.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-category">
+          <h2>Community Policies and Server Rules</h2>
+          
+          <div class="faq-item">
+            <h3>What are the basic rules for player behavior?</h3>
+            <div class="faq-answer">
+              <p>Pi Craft operates on principles of mutual respect, fair play, and community collaboration. Our rules framework emphasizes positive community building while maintaining clear boundaries for unacceptable behavior.</p>
+              
+              <p><strong>Respect and Communication:</strong> All players are expected to treat fellow community members with respect and courtesy. This includes appropriate language in chat, respectful disagreement during conflicts, and inclusive behavior that welcomes players of all backgrounds and experience levels.</p>
+              
+              <p><strong>Fair Play Standards:</strong> Cheating, exploiting game mechanics, using unauthorized client modifications, or gaining unfair advantages through external tools is strictly prohibited. This includes but is not limited to x-ray texture packs, flying clients, automated farming systems, and duplication exploits.</p>
+              
+              <p><strong>Griefing and Property Respect:</strong> Deliberate destruction of other players' builds, theft of items from private storage, or intentional disruption of community projects is not tolerated. While the server maintains open building policies, players are expected to respect obvious private builds and community spaces.</p>
+              
+              <p><strong>Community Contribution:</strong> Players are encouraged to contribute positively to server culture through helpful behavior, collaborative projects, resource sharing, and constructive participation in community discussions and events.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3>How are rule violations handled?</h3>
+            <div class="faq-answer">
+              <p>Our disciplinary system emphasizes education, community restoration, and progressive consequences while maintaining fairness and transparency in all enforcement actions.</p>
+              
+              <p><strong>Investigation Procedures:</strong> All reported rule violations undergo thorough investigation using server logs, player reports, and available evidence. Players are given opportunities to explain their actions and present their perspective before disciplinary decisions are made.</p>
+              
+              <p><strong>Progressive Discipline:</strong> Most violations result in progressive consequences starting with warnings and education, escalating through temporary restrictions to permanent bans only for severe or repeated offenses. The goal is behavioral correction rather than punishment whenever possible.</p>
+              
+              <p><strong>Appeal Process:</strong> All disciplinary actions can be appealed through formal processes that include evidence review, community input when appropriate, and fair consideration of mitigating circumstances. Appeals are handled by different staff members than those involved in the original decision when possible.</p>
+              
+              <p><strong>Community Restoration:</strong> When violations affect other players or community projects, disciplinary actions often include requirements for restoration, compensation, or community service that helps repair damage and rebuild trust within the community.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3>Is there an age requirement or content rating for the server?</h3>
+            <div class="faq-answer">
+              <p>Pi Craft maintains family-friendly community standards suitable for players of all ages while fostering mature, respectful discourse and collaboration.</p>
+              
+              <p><strong>Content Standards:</strong> All server communication, builds, and community interaction must meet family-friendly standards appropriate for general audiences. This includes restrictions on profanity, sexual content, violence glorification, and other mature themes in both chat and constructed builds.</p>
+              
+              <p><strong>Age-Appropriate Community:</strong> While we don't enforce specific age requirements, our community standards and moderation policies are designed to create an environment where players of all ages can participate safely and comfortably.</p>
+              
+              <p><strong>Parental Guidance:</strong> Parents of younger players are encouraged to review our rules, community guidelines, and communication policies to ensure they align with family values and comfort levels for online gaming participation.</p>
+              
+              <p><strong>Educational Environment:</strong> We strive to create a positive learning environment where players can develop building skills, collaboration abilities, problem-solving capabilities, and positive social interaction in a safe, moderated community setting.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-category">
+          <h2>Getting Started and Technical Support</h2>
+          
+          <div class="faq-item">
+            <h3>How do I connect to the Pi Craft server?</h3>
+            <div class="faq-answer">
+              <p>Connecting to Pi Craft requires a legitimate Minecraft account and compatible client version. The connection process is straightforward, but we provide comprehensive support for players experiencing technical difficulties.</p>
+              
+              <p><strong>Server Address:</strong> Use the server address provided on our server information page to connect through the Minecraft client's multiplayer menu. Ensure you're using a compatible Minecraft version as listed in our technical specifications.</p>
+              
+              <p><strong>Connection Requirements:</strong> Players must have a legitimate, purchased Minecraft account from Mojang/Microsoft. Cracked or pirated clients are not supported and will be unable to connect to our server.</p>
+              
+              <p><strong>Firewall and Network:</strong> Some networks, particularly school or workplace connections, may block Minecraft server connections. If you're unable to connect, try from a different network or contact your network administrator about firewall restrictions.</p>
+              
+              <p><strong>Technical Support:</strong> If you're experiencing connection issues, our community forum includes technical support sections where experienced players and administrators can help troubleshoot client configuration, network problems, and compatibility issues.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3>What should new players do when they first join?</h3>
+            <div class="faq-answer">
+              <p>New players are encouraged to take time to explore the server, understand community culture, and establish themselves gradually rather than rushing into major projects or commitments.</p>
+              
+              <p><strong>Initial Exploration:</strong> Spend time exploring the spawn area and nearby terrain to get familiar with the server's world generation, community builds, and available resources. This helps inform decisions about where to establish your first base or temporary shelter.</p>
+              
+              <p><strong>Community Introduction:</strong> Introduce yourself in chat or on the community forum to connect with other players, learn about ongoing projects, and discover opportunities for collaboration or mentorship from experienced community members.</p>
+              
+              <p><strong>Resource Gathering:</strong> Begin standard survival gameplay by gathering basic resources, establishing food sources, and creating tools necessary for more advanced building and exploration projects. The server's authentic survival mechanics mean you'll need to work for all resources.</p>
+              
+              <p><strong>Rule Familiarization:</strong> Review server rules, community guidelines, and behavioral expectations before engaging in major building projects or community interaction. Understanding server culture helps avoid conflicts and contributes to positive community development.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3>How can I contribute to the Pi Craft community?</h3>
+            <div class="faq-answer">
+              <p>Community contribution takes many forms beyond just building impressive structures. We value all types of positive participation that enhance the server experience for current and future players.</p>
+              
+              <p><strong>Collaborative Building:</strong> Participate in community projects, contribute to shared infrastructure, or offer building assistance to other players working on ambitious projects. Collaborative builds often become server landmarks and sources of community pride.</p>
+              
+              <p><strong>Resource Sharing:</strong> Share excess resources, create public farms or resource gathering areas, and contribute to community infrastructure that benefits all players. Generous resource sharing helps establish positive server culture.</p>
+              
+              <p><strong>New Player Assistance:</strong> Welcome new players, offer guidance about server mechanics and community culture, and provide mentorship that helps newcomers become successful community members. Experienced player guidance is invaluable for server growth.</p>
+              
+              <p><strong>Community Events:</strong> Organize or participate in community events, building competitions, exploration expeditions, or collaborative projects that bring players together and create shared experiences that strengthen community bonds.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-footer">
+        <div class="footer-card">
+          <h2>Additional Information and Support</h2>
+          <p>This FAQ covers the most frequently asked questions about Pi Craft, but community needs and server policies evolve over time. For questions not addressed here, please consult our community forum for peer support and discussion, or contact our administration team through the channels outlined on our contact page.</p>
+          
+          <p>We regularly update this FAQ based on community feedback, commonly asked questions, and changes to server policies or technical infrastructure. If you believe important information is missing or outdated, please let us know through forum discussion or administrative contact.</p>
+          
+          <p>Remember that Pi Craft is a community-driven server where player input shapes policies, priorities, and development directions. Your questions, suggestions, and feedback contribute to creating a better experience for all community members.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Pi Craft | Community-Driven Minecraft Server</p>
+    </footer>
+  </div>
 </body>
 </html>
