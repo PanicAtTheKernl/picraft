@@ -24,6 +24,18 @@
       margin-bottom: 2rem;
     }
     
+    .imgur-embed-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .imgur-embed-wrapper .imgur-embed-pub {
+      margin: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    
     @media (max-width: 768px) {
       .banner-container {
         padding: 0.5rem;
@@ -37,22 +49,10 @@
 </head>
 <body>
   <div class="container">
-    <!-- Banner Section - Option 1: Imgur Embed -->
+    <!-- Banner Section -->
     <section class="banner-container">
-      <div class="imgur-embed-wrapper">
-        <blockquote class="imgur-embed-pub" lang="en" data-id="a/dUsaEwt" data-context="false">
-          <a href="//imgur.com/a/dUsaEwt">Pi Craft Banner</a>
-        </blockquote>
-        <script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
-      </div>
+      <img src="https://i.postimg.cc/nLzG5t60/Pi-Craft-Banner.png" alt="Pi Craft Server Banner" class="banner-image">
     </section>
-    
-    <!-- Banner Section - Option 2: Direct Image (uncomment and replace URL when you get the direct link) -->
-    <!-- 
-    <section class="banner-container">
-      <img src="DIRECT_IMAGE_URL_HERE" alt="Pi Craft Server Banner" class="banner-image">
-    </section>
-    -->
 
     <header class="hero-section">
       <div class="hero-content">
