@@ -7,24 +7,22 @@
   <link rel="stylesheet" href="style.css">
   <meta name="description" content="Explore the Pi Craft gallery showcasing community builds, player creations, events, and highlights from our Minecraft server.">
   <style>
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin: 40px 0;
+    .gallery-item {
+      margin-bottom: 40px;
     }
 
     .gallery-item img {
       width: 100%;
       height: auto;
       display: block;
+      margin-bottom: 8px;
     }
 
     .gallery-item p {
-      margin-top: 8px;
-      color: #f0f0f0; /* Matches main page text color */
-      font-size: 0.95rem;
-      line-height: 1.4;
+      margin: 0;
+      color: inherit; /* Use the same color as page text */
+      font-size: 1rem;
+      line-height: 1.5;
     }
   </style>
 </head>
@@ -55,7 +53,7 @@
         </div>
       </section>
 
-      <section class="gallery-grid">
+      <section class="gallery">
         <div class="gallery-item">
           <img src="images/spawn.png" alt="Spawn area overview">
           <p>Spawn Area: Our beautifully crafted spawn area where all players begin their adventure.</p>
