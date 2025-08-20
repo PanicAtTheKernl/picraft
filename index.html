@@ -22,18 +22,25 @@
       padding: 1rem;
       background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
       margin-bottom: 2rem;
+      min-height: 100px;
     }
     
-    .imgur-embed-wrapper {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    .imgur-embed-wrapper .imgur-embed-pub {
-      margin: 0;
+    .banner-fallback {
+      background: linear-gradient(135deg, #8B4513, #D2691E);
       border-radius: 8px;
-      overflow: hidden;
+      margin: 1rem auto;
+      max-width: 1200px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Show fallback if image fails */
+    .banner-image:not([src]), .banner-image[src=""] {
+      display: none;
+    }
+    
+    .banner-image:not([src]) + .banner-fallback,
+    .banner-image[src=""] + .banner-fallback {
+      display: block !important;
     }
     
     @media (max-width: 768px) {
@@ -44,6 +51,11 @@
       .banner-image {
         border-radius: 4px;
       }
+      
+      .banner-fallback {
+        font-size: 1.2rem;
+        padding: 1.5rem;
+      }
     }
   </style>
 </head>
@@ -51,7 +63,12 @@
   <div class="container">
     <!-- Banner Section -->
     <section class="banner-container">
-      <img src="https://i.postimg.cc/nLzG5t60/Pi-Craft-Banner.png" alt="Pi Craft Server Banner" class="banner-image">
+      <img src="https://i.postimg.cc/34y9wHNW/banner.png" alt="Pi Craft Server Banner" class="banner-image" 
+           onerror="this.onerror=null; this.src='https://postimg.cc/34y9wHNW/banner.png';">
+      <!-- Fallback text if image fails to load -->
+      <div class="banner-fallback" style="display: none; text-align: center; padding: 2rem; color: white; font-size: 1.5rem;">
+        🎮 Pi Craft Server - Pure Minecraft Survival 🎮
+      </div>
     </section>
 
     <header class="hero-section">
