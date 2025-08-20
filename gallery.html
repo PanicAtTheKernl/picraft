@@ -9,42 +9,21 @@
   <style>
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
       margin: 40px 0;
-    }
-
-    .gallery-item {
-      background: #2c2c2c; /* match main page card bg */
-      border-radius: 12px;
-      overflow: hidden;
-      padding: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      transition: transform 0.2s;
-      text-align: center;
-    }
-
-    .gallery-item:hover {
-      transform: translateY(-5px);
     }
 
     .gallery-item img {
       width: 100%;
       height: auto;
-      border-radius: 8px;
-      margin-bottom: 15px;
       display: block;
     }
 
-    .gallery-item h3 {
-      margin: 10px 0 5px;
-      color: #f0f0f0; /* match main page headings */
-    }
-
     .gallery-item p {
+      margin-top: 8px;
       color: #ccc;
       font-size: 0.95rem;
-      line-height: 1.4;
     }
   </style>
 </head>
@@ -71,15 +50,14 @@
       <section class="gallery-intro">
         <div class="overview-card">
           <h2>Welcome to the Pi Craft Gallery</h2>
-          <p>Explore our community’s amazing creations—from builds and events to server highlights. Add your own images to inspire others!</p>
+          <p>Explore our community’s creations—from builds and events to server highlights. Images are displayed below with a short description.</p>
         </div>
       </section>
 
       <section class="gallery-grid">
         <div class="gallery-item">
           <img src="images/spawn.png" alt="Spawn area overview">
-          <h3>Spawn Area</h3>
-          <p>Our beautifully crafted spawn area where all players begin their adventure.</p>
+          <p>Spawn Area: Our beautifully crafted spawn area where all players begin their adventure.</p>
         </div>
       </section>
     </main>
