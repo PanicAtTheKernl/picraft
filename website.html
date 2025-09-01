@@ -12,59 +12,66 @@ body {
   color:#eee;
   display:flex;
   flex-direction:column;
-  justify-content:center;
   align-items:center;
+  justify-content:flex-start;
   min-height:100vh;
   text-align:center;
   padding:20px;
 }
 header {
-  margin-bottom:25px;
+  margin-bottom:20px;
 }
 header h1 {
-  font-size:3rem;
+  font-size:2.5rem;
   color:#0ff;
-  margin-bottom:0.5rem;
+  margin-bottom:0.3rem;
 }
 header p {
   color:#aaa;
-  font-size:1.2rem;
+  font-size:1rem;
 }
 .server-info {
   background:#1a1a1a;
-  border:2px solid #0ff;
-  border-radius:12px;
-  padding:20px;
+  border:1px solid #0ff;
+  border-radius:10px;
+  padding:15px;
   width:90%;
   max-width:400px;
-  margin-bottom:25px;
-  box-shadow:0 0 15px rgba(0,255,255,0.3);
+  margin-bottom:20px;
 }
 .server-info p {
-  margin:8px 0;
+  margin:6px 0;
   font-size:1rem;
+  cursor:default;
+}
+.ip-copy {
+  cursor:pointer;
+  color:#0ff;
+}
+.ip-copy:hover {
+  text-decoration:underline;
 }
 .links {
   display:flex;
   flex-direction:column;
-  gap:12px;
+  gap:10px;
   width:90%;
   max-width:400px;
+  margin-bottom:20px;
 }
 .links a {
   display:block;
-  padding:14px;
-  border-radius:10px;
+  padding:12px;
+  border-radius:8px;
   color:#fff;
   text-decoration:none;
   background:#222;
   font-weight:bold;
-  transition:all 0.3s ease;
+  text-align:center;
 }
 .links a:hover {
   background:#0ff;
   color:#000;
-  transform:scale(1.05);
 }
 .minecraft {background:#55a630;}
 .discord {background:#7289da;}
@@ -74,10 +81,9 @@ header p {
 footer {
   font-size:12px;
   color:#666;
-  margin-top:20px;
+  margin-top:10px;
 }
 footer a {color:#0ff; text-decoration:none;}
-footer a:hover {text-decoration:underline;}
 </style>
 </head>
 <body>
@@ -88,10 +94,11 @@ footer a:hover {text-decoration:underline;}
 </header>
 
 <div class="server-info">
-  <p><strong>Minecraft IP:</strong> mc.picraft.org</p>
+  <p><strong>Minecraft IP:</strong> <span id="ip" class="ip-copy" onclick="copyIP()">mc.picraft.org</span></p>
   <p><strong>Online Players:</strong> <span id="online">–</span></p>
   <p><strong>Max Players:</strong> <span id="max">–</span></p>
   <p><strong>Status:</strong> <span id="status">Checking...</span></p>
+  <p><strong>Version:</strong> <span id="version">1.21.8</span></p>
 </div>
 
 <div class="links">
@@ -118,6 +125,11 @@ async function fetchStats(){
 }
 fetchStats();
 setInterval(fetchStats,5000);
+
+function copyIP(){
+  navigator.clipboard.writeText('mc.picraft.org');
+  alert('Server IP copied to clipboard!');
+}
 </script>
 
 </body>
