@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pi Craft — Server Wiki (Extended)</title>
+  <style>
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#111;color:#ddd;line-height:1.6}
+    .wrap{display:flex;min-height:100vh}
+    aside{width:250px;background:#1a1a1a;border-right:1px solid #333;padding:16px;overflow-y:auto}
+    .brand{font-weight:900;font-size:20px;margin-bottom:10px;color:#fff}
+    nav a{display:block;padding:6px 8px;margin:2px 0;text-decoration:none;color:#ccc;border-radius:4px}
+    nav a:hover{background:#222;color:#fff}
+    main{flex:1;padding:20px;overflow-y:auto}
+    h1,h2,h3{color:#fff;margin-top:0}
+    .card{border:1px solid #333;background:#1a1a1a;padding:12px;border-radius:6px;margin-bottom:14px}
+    pre{background:#000;border:1px solid #333;padding:10px;overflow:auto;font-size:13px;color:#0f0}
+    .small{font-size:13px;color:#888}
+    footer{padding:12px;border-top:1px solid #333;font-size:13px;color:#666}
+    @media(max-width:800px){aside{display:none}.wrap{display:block}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <aside>
+      <div class="brand">Pi Craft Wiki</div>
+      <div class="small">Server IP: <b>mc.picraft.org</b></div>
+      <hr>
+      <nav>
+        <a href="#home" data-link>Home</a>
+        <a href="#join" data-link>Join Guide</a>
+        <a href="#advice" data-link>Advice</a>
+        <a href="#tech" data-link>Technical</a>
+        <a href="#farms" data-link>Farm Types</a>
+        <a href="#storage" data-link>Storage Systems</a>
+        <a href="#jvm" data-link>JVM Tuning</a>
+        <a href="#templates" data-link>Templates</a>
+        <a href="#checklists" data-link>Checklists</a>
+        <a href="#community" data-link>Community</a>
+        <a href="#faq" data-link>FAQ</a>
+        <a href="#hall" data-link>Hall of Shame</a>
+        <a href="#downloads" data-link>World Downloads</a>
+      </nav>
+    </aside>
+    <main>
+      <section id="home">
+        <h1>Welcome to Pi Craft</h1>
+        <p>This is the extended server wiki for Pi Craft. It serves as a living manual, knowledge base, and documentation hub for players who want to build, optimize, and survive without accidentally killing performance. If you’ve ever wondered how to design a farm that doesn’t turn the server into a slide show, this wiki is for you.</p>
+        <p>Unlike typical servers, we don’t enforce arbitrary limits. Instead, we rely on player knowledge, guidance, and transparency. If you push the server too hard, you’ll be asked to fix it — not banned for existing.</p>
+      </section>
+
+      <section id="join">
+        <h2>Join Guide</h2>
+        <div class="card">
+          <h3>Steps to Connect</h3>
+          <ol>
+            <li>Use Minecraft Java Edition version 1.21.8.</li>
+            <li>Add the server address: <b>mc.picraft.org</b>.</li>
+            <li>Optional: Install Fabric loader and performance mods: Sodium, Lithium, Phosphor, and Iris (if you want shaders).</li>
+            <li>Join the Discord: <a href="https://discord.gg/3hrtppJwzY" target="_blank">discord.gg/3hrtppJwzY</a>.</li>
+          </ol>
+          <h3>Recommended Mods</h3>
+          <ul>
+            <li><b>Sodium:</b> Client-side performance boost.</li>
+            <li><b>Lithium:</b> Physics and AI optimizations.</li>
+            <li><b>Iris:</b> Shader support without tanking FPS.</li>
+            <li><b>Starlight:</b> Lighting engine fix for better performance.</li>
+            <li><b>MiniHUD:</b> Visualize chunk borders and spawn spheres.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="advice">
+        <h2>Advice</h2>
+        <div class="card">
+          <p>These guidelines exist to make sure the server stays fun and doesn’t melt. Follow them if you want your projects to be stable and admired rather than infamous.</p>
+          <h3>Chunk Loaders</h3>
+          <ul>
+            <li>Always log chunk loaders in Discord. Include coords and type.</li>
+            <li>Keep loaders targeted: don’t run more chunks than you need.</li>
+            <li>Portal loaders are efficient. AFK player loaders are tolerated, but please document.</li>
+          </ul>
+          <h3>Entities</h3>
+          <ul>
+            <li>Avoid entity spam. Think efficiency over quantity.</li>
+            <li>Guideline: 50 passive / 20 hostile mobs per chunk max for smooth TPS.</li>
+            <li>Villagers are heavy. Limit breeder sizes and trade halls to what you actually use.</li>
+          </ul>
+          <h3>Redstone</h3>
+          <ul>
+            <li>Observer-heavy clocks are inefficient. Use hopper or comparator clocks.</li>
+            <li>Include kill switches and on/off toggles for everything.</li>
+            <li>Overflow-proof all storage systems.</li>
+          </ul>
+          <h3>AFK</h3>
+          <ul>
+            <li>AFK farming is fine, but be transparent about what you’re running.</li>
+            <li>Don’t monopolize server resources at peak hours.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="tech">
+        <h2>Technical</h2>
+        <div class="card">
+          <h3>Farm Design</h3>
+          <ul>
+            <li>Align builds to chunk boundaries to avoid glitches.</li>
+            <li>Use activation switches instead of always-on machines.</li>
+            <li>Favor hopper minecarts for transport over long hopper chains.</li>
+          </ul>
+          <h3>Debugging Tools</h3>
+          <ul>
+            <li><b>Spark:</b> Run <code>/spark profiler --timeout 30s</code> and post the link in Discord.</li>
+            <li><b>Carpet mod (client):</b> Local testing for lag impact.</li>
+            <li><b>Replay mod:</b> Analyze builds for inefficiencies.</li>
+          </ul>
+          <h3>Common Mistakes</h3>
+          <ul>
+            <li>Endless observer chains creating tick storms.</li>
+            <li>Mass villager cramming causing AI overload.</li>
+            <li>Storage without overflow control, leading to items spewing everywhere.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="farms">
+        <h2>Farm Types</h2>
+        <div class="card">
+          <h3>Mob Farms</h3>
+          <ul>
+            <li>Use efficient kill chambers (lava blades, fall damage, or portals).</li>
+            <li>Limit mob cramming — entity collisions eat TPS.</li>
+            <li>Spawn-proof surroundings to maximize efficiency.</li>
+          </ul>
+          <h3>Crop Farms</h3>
+          <ul>
+            <li>Villager-based farms should be limited in scale.</li>
+            <li>Hopper minecarts collect crops more efficiently than hopper carpets.</li>
+          </ul>
+          <h3>Iron Farms</h3>
+          <ul>
+            <li>Smaller clusters of villages run more efficiently than one mega farm.</li>
+            <li>Zombie panic-based designs are less laggy than perpetual panic setups.</li>
+          </ul>
+          <h3>Guardian Farms</h3>
+          <ul>
+            <li>Drain areas with sand or sponges, not just laggy perimeter removal.</li>
+            <li>Water currents with soul sand or magma blocks are cheaper than piston pushers.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="storage">
+        <h2>Storage Systems</h2>
+        <div class="card">
+          <h3>Guidelines</h3>
+          <ul>
+            <li>Always overflow-proof every item stream.</li>
+            <li>Batch-sort items instead of sorting everything individually when possible.</li>
+            <li>Use dropper-vator + water streams for bulk storage.</li>
+            <li>Avoid massive hopper carpets; use shulker loaders/unloaders.</li>
+          </ul>
+          <h3>Shulker Systems</h3>
+          <ul>
+            <li>Shulker loaders should detect full shulkers before replacing.</li>
+            <li>Unloading should use comparators to avoid jams.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="jvm">
+        <h2>JVM Tuning</h2>
+        <div class="card">
+          <h3>Server Flags</h3>
+          <pre>-Xms12G -Xmx12G -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:G1ReservePercent=20</pre>
+          <p class="small">Balanced GC flags to reduce TPS spikes from garbage collection.</p>
+          <h3>Other JVM Options</h3>
+          <ul>
+            <li><code>-XX:+ParallelRefProcEnabled</code> improves GC with many entities.</li>
+            <li><code>-XX:+UnlockExperimentalVMOptions</code> unlocks experimental JVM optimizations.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="templates">
+        <h2>Templates</h2>
+        <div class="card">
+          <h3>Chunk Loader</h3>
+          <pre>Name: &lt;IGN&gt;
+Coords: X Y Z
+Type: Portal / AFK / Entity
+Purpose: Keeps &lt;thing&gt; alive
+Kill switch: yes/no</pre>
+          <h3>Farm</h3>
+          <pre>Farm: &lt;name&gt;
+Owner: &lt;IGN&gt;
+Type: Mob / Crop / Other
+Throughput: items/hr
+Overflow handling: yes/no
+Notes: Additional info</pre>
+        </div>
+      </section>
+
+      <section id="checklists">
+        <h2>Checklists</h2>
+        <div class="card">
+          <h3>Before Activation</h3>
+          <ul>
+            <li>Added kill switch.</li>
+            <li>Overflow protection in place.</li>
+            <li>Chunk alignment verified.</li>
+          </ul>
+          <h3>After First Run</h3>
+          <ul>
+            <li>Run Spark profiler and share results.</li>
+            <li>Log throughput rates.</li>
+            <li>Check for lag during peak hours.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="community">
+        <h2>Community</h2>
+        <div class="card">
+          <h3>Discord</h3>
+          <ul>
+            <li>#announcements — official updates.</li>
+            <li>#chunk-loaders — coordinate registry.</li>
+            <li>#tech-help — discussion and debugging.</li>
+            <li>#showcase — flex your builds.</li>
+          </ul>
+          <h3>Events</h3>
+          <ul>
+            <li>Farm review sessions.</li>
+            <li>Perimeter dig events.</li>
+            <li>Community mega projects.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="faq">
+        <h2>FAQ</h2>
+        <div class="card">
+          <h3>Rules?</h3>
+          <p>No fixed rules, just best practices and advice.</p>
+          <h3>AFK?</h3>
+          <p>Allowed, but keep AFK farms reasonable and monitored.</p>
+          <h3>Dupes?</h3>
+          <p>TNT, carpet, and sand dupes are allowed. Others may be discussed first.</p>
+          <h3>If my farm kills TPS?</h3>
+          <p>It will be disabled until optimized. Document changes and restore it once fixed.</p>
+        </div>
+      </section>
+
+      <section id="hall">
+        <h2>Hall of Shame</h2>
+        <div class="card">
+          <p>Examples of past disasters:</p>
+          <ul>
+            <li>Villager pyramid — hundreds stacked in a single chunk caused pathfinding meltdown.</li>
+            <li>Chicken farm with unchecked breeding that filled chunks with 10,000+ entities.</li>
+            <li>Storage system without overflow, clogging the server with dropped items.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="downloads">
+        <h2>World Downloads</h2>
+        <div class="card">
+          <p>World downloads are occasionally provided for archiving or testing. Always confirm in Discord before requesting one.</p>
+          <h3>Why We Provide Downloads</h3>
+          <ul>
+            <li>Preservation of mega builds and farms.</li>
+            <li>Offline performance testing.</li>
+            <li>Backup in case of catastrophic world corruption.</li>
+          </ul>
+        </div>
+      </section>
+
+      <footer>
+        <div class="small">© 2025 Pi Craft • Server Wiki • Discord: <a href="https://discord.gg/3hrtppJwzY" target="_blank">discord.gg/3hrtppJwzY</a></div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    function show(id){document.querySelectorAll('main section').forEach(s=>s.style.display='none');const el=document.getElementById(id);if(el)el.style.display='block';}
+    document.querySelectorAll('aside nav a').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const id=a.getAttribute('href').replace('#','');history.pushState(null,'','#'+id);show(id);}));
+    window.addEventListener('load',()=>{const hash=location.hash.replace('#','')||'home';show(hash)});
+    window.addEventListener('popstate',()=>{const hash=location.hash.replace('#','')||'home';show(hash)});
+  </script>
+</body>
+</html>
