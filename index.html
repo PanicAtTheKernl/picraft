@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PiCraft</title>
+    <style>
+        body {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            font: 16px/1.5 Georgia, serif;
+            color: #000;
+            background: #fff;
+        }
+        
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
+        nav {
+            border-bottom: 1px solid #000;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+        }
+        
+        nav a {
+            margin-right: 15px;
+            color: #000;
+            text-decoration: underline;
+        }
+        
+        nav a.active {
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        h2 {
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        h3 {
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        a {
+            color: #000;
+            text-decoration: underline;
+        }
+        
+        .server-info {
+            border: 1px solid #000;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        ul {
+            margin: 10px 0;
+            padding-left: 30px;
+        }
+        
+        li {
+            margin-bottom: 5px;
+        }
+        
+        .warning {
+            border: 1px solid #000;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        code {
+            font-family: monospace;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #000;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" onclick="showPage('home')" class="nav-link active">Home</a>
+        <a href="#" onclick="showPage('features')" class="nav-link">Features</a>
+        <a href="#" onclick="showPage('join')" class="nav-link">How to Join</a>
+        <a href="#" onclick="showPage('rules')" class="nav-link">Rules</a>
+        <a href="#" onclick="showPage('faq')" class="nav-link">FAQ</a>
+        <a href="#" onclick="showPage('community')" class="nav-link">Community</a>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <div id="home" class="page active">
+        <h1>PiCraft</h1>
+        
+        <p>The Minecraft server that's actually worth your time.</p>
+        
+        <div class="server-info">
+            <h3>Connection Info</h3>
+            <p><strong>Server IP:</strong> <code>mc.picraft.org</code></p>
+            <p><strong>Version:</strong> Java Edition (Latest)</p>
+            <p><strong>Type:</strong> Whitelist Only</p>
+            <p><strong>Discord:</strong> <a href="https://discord.gg/3hrtppJwzY">discord.gg/3hrtppJwzY</a></p>
+        </div>
+
+        <h2>What Makes Us Different</h2>
+        
+        <p>This isn't your typical "join and grief in 5 minutes" server. We're a whitelist community that actually cares about building something awesome together. No random 12-year-olds destroying your builds at 3 AM. No pay-to-win bullshit. No corporate sponsors trying to sell you energy drinks.</p>
+        
+        <p>We're the real deal: A community-driven server where your builds matter, your friends are actual friends, and the only currency is creativity and collaboration.</p>
+
+        <p>This server exists because we got tired of the garbage that passes for "community servers" these days. We built something that doesn't suck, populated it with people who aren't terrible, and somehow created a place worth spending time.</p>
+        
+        <p>If you're looking for instant gratification, go somewhere else. If you want to be part of something actually good, join our Discord and prove you're worth adding to the whitelist.</p>
+    </div>
+
+    <!-- FEATURES PAGE -->
+    <div id="features" class="page">
+        <h1>Server Features</h1>
+        
+        <h2>Performance That Doesn't Suck</h2>
+        <ul>
+            <li><strong>Zero lag tolerance:</strong> Optimized for smooth gameplay, not shareholder profits</li>
+            <li><strong>24/7 uptime:</strong> Because we actually know how to run a server</li>
+            <li><strong>Regular backups:</strong> Your builds are safer than your browser history</li>
+            <li><strong>Anti-grief protection:</strong> CoreProtect has your back</li>
+        </ul>
+        
+        <h2>Building and Gameplay</h2>
+        <ul>
+            <li><strong>Survival mode:</strong> Earn your diamonds like a real player</li>
+            <li><strong>Community projects:</strong> Build epic stuff together</li>
+            <li><strong>Mature player base:</strong> People who can spell "definitely" correctly</li>
+            <li><strong>No pay-to-win:</strong> Your wallet stays closed, your skills stay sharp</li>
+            <li><strong>Proximity chat:</strong> Talk to players nearby without spamming global chat</li>
+            <li><strong>Custom tweaks:</strong> Quality of life improvements that actually improve life</li>
+        </ul>
+        
+        <h2>What We Don't Have</h2>
+        
+        <ul>
+            <li><strong>Pay-to-win shops:</strong> Keep your credit card in your wallet</li>
+            <li><strong>Annoying donation messages:</strong> We're not broke, thanks</li>
+            <li><strong>Overpowered admin abuse:</strong> Our staff actually play the game properly</li>
+            <li><strong>Toxic player bases:</strong> We curate our community like a fine wine</li>
+            <li><strong>Lag:</strong> Our server doesn't run on a potato powered by hope</li>
+            <li><strong>Drama:</strong> Save it for your reality TV shows</li>
+        </ul>
+    </div>
+
+    <!-- JOIN PAGE -->
+    <div id="join" class="page">
+        <h1>How to Join</h1>
+        
+        <div class="warning">
+            <strong>READ THIS:</strong> You cannot just connect and start playing. This is a whitelist server. Follow the steps below or forever hold your peace.
+        </div>
+        
+        <h2>Application Process</h2>
+        
+        <p><strong>Step 1:</strong> Join our Discord server: <a href="https://discord.gg/3hrtppJwzY">discord.gg/3hrtppJwzY</a></p>
+        
+        <p><strong>Step 2:</strong> Read the rules (yes, actually read them, don't just scroll past like terms of service)</p>
+        
+        <p><strong>Step 3:</strong> Submit your application in the appropriate channel. Tell us:</p>
+        <ul>
+            <li>Your Minecraft username (the one you'll actually use)</li>
+            <li>Your age (be honest, we can tell if you're 12)</li>
+            <li>Why you want to join ("because Minecraft is fun" is not an answer)</li>
+            <li>Your building style or what you like to do in Minecraft</li>
+            <li>How you found us</li>
+        </ul>
+        
+        <p><strong>Step 4:</strong> Wait for approval (we're not robots, this takes time)</p>
+        
+        <p><strong>Step 5:</strong> Get whitelisted and start playing like a civilized human being</p>
+
+        <h2>What We Look For</h2>
+        
+        <ul>
+            <li>Players aged 16 and up (mental age counts too)</li>
+            <li>People who can follow basic rules without constant supervision</li>
+            <li>Builders who want to contribute to the community</li>
+            <li>Players who understand what "whitelist" means</li>
+            <li>Humans who can communicate in English effectively</li>
+            <li>People who won't disappear after a week</li>
+        </ul>
+
+        <p>Great communities aren't built overnight, and they're definitely not built by accepting every random person who shows up. Quality over quantity, always.</p>
+    </div>
+
+    <!-- RULES PAGE -->
+    <div id="rules" class="page">
+        <h1>Server Rules</h1>
+        
+        <h2>The Basics</h2>
+        <ul>
+            <li><strong>Don't be a dick:</strong> This covers about 90% of everything</li>
+            <li><strong>No griefing:</strong> Destroy someone's build, get destroyed yourself (banned)</li>
+            <li><strong>No cheating:</strong> X-ray vision belongs in Superman comics, not Minecraft</li>
+            <li><strong>English primary:</strong> So we can all understand your terrible jokes</li>
+            <li><strong>Age 16+:</strong> Mental age, not just physical age</li>
+        </ul>
+        
+        <h2>Building Guidelines</h2>
+        <ul>
+            <li>Build away from spawn unless it's a community project</li>
+            <li>Don't build right next to someone without asking</li>
+            <li>Clean up your mess when mining or building</li>
+            <li>No massive lag machines or redstone contraptions that break the server</li>
+            <li>Use common sense when claiming land</li>
+        </ul>
+        
+        <h2>Community Standards</h2>
+        <ul>
+            <li><strong>Respect:</strong> Don't be a toxic waste of oxygen</li>
+            <li><strong>Teamwork:</strong> This is a community, not a solo experience</li>
+            <li><strong>Communication:</strong> Use chat responsibly, don't spam</li>
+            <li><strong>Conflict resolution:</strong> Talk to staff if there's a problem</li>
+            <li><strong>Common courtesy:</strong> Replace what you borrow, clean up shared spaces</li>
+        </ul>
+
+        <p>Break these rules and you'll find yourself removed faster than you can say "it was just a prank bro."</p>
+    </div>
+
+    <!-- FAQ PAGE -->
+    <div id="faq" class="page">
+        <h1>Frequently Asked Questions</h1>
+        
+        <h3>Can I just join without applying?</h3>
+        <p><strong>Answer:</strong> No. That's literally what "whitelist" means. Are you new to words?</p>
+        
+        <h3>Do you have creative mode?</h3>
+        <p><strong>Answer:</strong> This is survival. If you want creative mode, go play single player.</p>
+        
+        <h3>Can my little brother/sister/cousin/random child join?</h3>
+        <p><strong>Answer:</strong> If they're 16+ and can follow rules without supervision, sure. If they need babysitting, no.</p>
+        
+        <h3>Is there a cost to play?</h3>
+        <p><strong>Answer:</strong> Just the cost of owning Minecraft. We're not here to empty your wallet.</p>
+        
+        <h3>What version do you run?</h3>
+        <p><strong>Answer:</strong> Latest stable version. We update when Mojang stops breaking things.</p>
+        
+        <h3>Can I stream/record on the server?</h3>
+        <p><strong>Answer:</strong> Ask permission first. Some players value privacy more than your 3 viewers.</p>
+        
+        <h3>Do you have plugins?</h3>
+        <p><strong>Answer:</strong> Yes, but nothing that fundamentally changes the game. Quality of life improvements only.</p>
+        
+        <h3>How long does the application process take?</h3>
+        <p><strong>Answer:</strong> Depends how busy we are and how good your application is. Usually a few days to a week.</p>
+        
+        <h3>Can I appeal a ban?</h3>
+        <p><strong>Answer:</strong> Sure, but if you got banned, you probably deserved it. Appeals go through Discord.</p>
+        
+        <h3>Do you wipe the world?</h3>
+        <p><strong>Answer:</strong> Only when absolutely necessary (major version changes, corruption, etc). Your builds are safe.</p>
+    </div>
+
+    <!-- COMMUNITY PAGE -->
+    <div id="community" class="page">
+        <h1>Community</h1>
+        
+        <h2>Events and Activities</h2>
+        <ul>
+            <li><strong>Build competitions:</strong> Show off your skills and win absolutely nothing except respect</li>
+            <li><strong>Group projects:</strong> Collaborate on massive builds that make other servers jealous</li>
+            <li><strong>Exploration parties:</strong> Find new territories together without getting lost</li>
+            <li><strong>Seasonal events:</strong> Holiday-themed builds and activities</li>
+            <li><strong>Movie nights:</strong> Watch movies together in our cinema (yes, we built one)</li>
+        </ul>
+        
+        <h2>Community Projects</h2>
+        <p>We regularly work together on large-scale builds that benefit everyone. Past projects have included spawn areas, transportation networks, public farms, and impressive landmarks. If you have an idea for a community project, bring it up in Discord.</p>
+        
+        <h2>Getting Help</h2>
+        <p>New to the server? Experienced players are usually happy to help you get started, show you around, or answer questions. Don't be afraid to ask in chat or Discord.</p>
+        
+        <h2>Staff Team</h2>
+        <p>Our staff team consists of long-time players who actually know how to run a server without power tripping. They play the game like everyone else and are there to help resolve issues, not to lord over people with admin commands.</p>
+        
+        <h2>Discord Community</h2>
+        <p>Our Discord server is where most of the community interaction happens outside the game. It's where you'll submit your application, get updates about the server, coordinate builds, and chat with other players.</p>
+        
+        <p><a href="https://discord.gg/3hrtppJwzY">Join our Discord: discord.gg/3hrtppJwzY</a></p>
+        
+        <hr>
+        
+        <p>Remember: Great communities aren't built overnight, and they're definitely not built by accepting every random person who shows up. Quality over quantity, always.</p>
+        
+        <p><small>PiCraft - Where Minecraft is still about mining and crafting, not mining your wallet and crafting disappointment.</small></p>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Update nav links
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => link.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
